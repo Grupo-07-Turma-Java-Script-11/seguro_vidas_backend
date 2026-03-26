@@ -1,98 +1,139 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# 🛡️ Seguro Vida — Sistema de Seguro de Vidas
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+> Projeto Integrador 2 — Grupo 07 | Turma JavaScript 11 | Generation Brasil
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+---
 
-## Description
+## 📋 Descrição
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+O **Seguro Vida** é uma aplicação backend desenvolvida como Projeto Integrador da [Generation Brasil](https://brazil.generation.org/), com o objetivo de simular um sistema de gestão de seguros de vida. O sistema permite o gerenciamento de apólices, beneficiários e demais entidades relacionadas ao domínio de seguros.
 
-## Project setup
+A aplicação foi construída com **NestJS** e **TypeScript**, seguindo os princípios de arquitetura modular, separação de responsabilidades e boas práticas de desenvolvimento de APIs RESTful.
 
-```bash
-$ npm install
+---
+
+## 🚀 Tecnologias Utilizadas
+
+| Tecnologia | Descrição |
+|---|---|
+| [Node.js](https://nodejs.org/) | Ambiente de execução JavaScript server-side |
+| [NestJS](https://nestjs.com/) | Framework progressivo para aplicações Node.js |
+| [TypeScript](https://www.typescriptlang.org/) | Superset tipado do JavaScript |
+| [ESLint](https://eslint.org/) | Linter para padronização de código |
+| [Prettier](https://prettier.io/) | Formatador de código |
+| [Jest](https://jestjs.io/) | Framework de testes |
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+seguro_vida/
+├── src/                  # Código-fonte principal da aplicação
+│   ├── app.module.ts     # Módulo raiz da aplicação
+│   ├── app.controller.ts # Controller principal
+│   ├── app.service.ts    # Service principal
+│   └── main.ts           # Ponto de entrada da aplicação
+├── test/                 # Testes automatizados (e2e)
+├── .gitignore
+├── .prettierrc           # Configuração do Prettier
+├── eslint.config.mjs     # Configuração do ESLint
+├── nest-cli.json         # Configuração do NestJS CLI
+├── package.json
+├── tsconfig.json         # Configuração do TypeScript
+└── tsconfig.build.json
 ```
 
-## Compile and run the project
+---
+
+## ⚙️ Pré-requisitos
+
+Antes de começar, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- [npm](https://www.npmjs.com/) (geralmente incluído com o Node.js)
+- [Git](https://git-scm.com/)
+
+---
+
+## 🔧 Instalação e Configuração
+
+### 1. Clone o repositório
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+git clone https://github.com/Grupo-07-Turma-Java-Script-11/seguro_vida.git
 ```
 
-## Run tests
+### 2. Acesse o diretório do projeto
 
 ```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
+cd seguro_vida
 ```
 
-## Deployment
-
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
-
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+### 3. Instale as dependências
 
 ```bash
-$ npm install -g @nestjs/mau
-$ mau deploy
+npm install
 ```
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+---
 
-## Resources
+## ▶️ Executando a Aplicação
 
-Check out a few resources that may come in handy when working with NestJS:
+```bash
+# Modo desenvolvimento
+npm run start
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+# Modo watch (reinicia automaticamente ao detectar mudanças)
+npm run start:dev
 
-## Support
+# Modo produção
+npm run start:prod
+```
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+A aplicação estará disponível em: **`http://localhost:3000`**
 
-## Stay in touch
+---
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## 🧪 Executando os Testes
 
-## License
+```bash
+# Testes unitários
+npm run test
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+# Testes end-to-end (e2e)
+npm run test:e2e
+
+# Cobertura de testes
+npm run test:cov
+```
+
+---
+
+## 🌐 Endpoints da API
+
+A API segue o padrão RESTful. Após iniciar a aplicação, acesse `http://localhost:3000` para visualizar os endpoints disponíveis.
+
+---
+
+## 👥 Equipe
+
+Desenvolvido pelo **Grupo 07** da Turma JavaScript 11 da [Generation Brasil](https://brazil.generation.org/).
+
+| Integrante | GitHub |
+|---|---|
+| Grupo 07 | [@Grupo-07-Turma-Java-Script-11](https://github.com/Grupo-07-Turma-Java-Script-11) |
+
+---
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para fins educacionais como parte do programa da **Generation Brasil**.
+
+---
+
+## 🔗 Links Úteis
+
+- [Documentação NestJS](https://docs.nestjs.com/)
+- [Generation Brasil](https://brazil.generation.org/)
+- [Repositório no GitHub](https://github.com/Grupo-07-Turma-Java-Script-11/seguro_vida)
